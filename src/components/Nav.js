@@ -2,9 +2,9 @@ import React from "react";
 
 function Nav() {
   return (
-    <div>
+    <>
       <section className="hero">
-        <nav className=" d-flex justify-content-evenly header ">
+        <nav className="header ">
           <ul>
             <li>
               <a href="">Home</a>
@@ -20,19 +20,20 @@ function Nav() {
             </li>
           </ul>
         </nav>
-        <div className="btn1">
+
+        <div className="container center">
           <h4>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s.
           </h4>
           <br></br>
-          <button type="button" class="btn btn-outline-info ">
-            more info
+          <button type="button" className="btn1">
+            MORE INFO
           </button>
         </div>
       </section>
-    </div>
+    </>
   );
 }
 

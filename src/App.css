@@ -3,14 +3,15 @@
 }
 
 .hero {
-  background: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fresh-vegetables-fruits-and-nuts-royalty-free-image-943001868-1550249117.jpg");
-  mask-repeat: no-repeat;
+  background: url("https://diabetes.org/sites/default/files/2019-08/Diabetes-Superfoods-min.jpg")
+    no-repeat;
+
   background-size: cover;
-  background-position: center center;
+  background-position: left;
   height: 100vh;
 }
 
-nav ul {
+/* nav ul {
   display: flex;
   justify-content: space-around;
   column-gap: 30px;
@@ -20,25 +21,60 @@ nav ul {
   padding: 20px;
 
   list-style: none;
-}
+} */
 
 .header {
-  font-size: larger;
-  font-weight: bold;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
 }
 
-.btn1 {
-  margin-top: 20%;
-  color: white;
+.header ul {
   text-align: center;
 }
-nav ul a {
-  text-decoration: none;
+
+.header ul li {
+  list-style: none;
+  display: inline-block;
 }
 
-nav ul a:hover {
-  color: black;
-  transition: 0.3s;
+.header ul li a {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: hwb(128 4% 55%);
+  font-size: 18px;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding: 25px;
+  transition: all ease 0.5s;
+}
+.btn1 {
+  margin-top: 5%;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(157, 216, 157);
+  border-style: hidden;
+
+  padding: 10px;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+.btn1:hover {
+  color: green;
+  border-color: green;
+  background-color: #d6d1e9d8;
+}
+div h4 {
+  margin-top: 33%;
+  color: green;
+}
+/* nav ul a {
+  text-decoration: none;
+}
+*/
+nav ul li a:hover {
+  background-color: #5c586d85;
 }
 
 @media (prefers-reduced-motion: no-preference) {
