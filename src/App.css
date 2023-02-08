@@ -2,9 +2,43 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero {
+  background: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fresh-vegetables-fruits-and-nuts-royalty-free-image-943001868-1550249117.jpg");
+  mask-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  column-gap: 30px;
+  justify-content: flex-end;
+  background-color: transparent;
+  margin: 0;
+  padding: 20px;
+
+  list-style: none;
+}
+
+.header {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.btn1 {
+  margin-top: 20%;
+  color: white;
+  text-align: center;
+}
+nav ul a {
+  text-decoration: none;
+}
+
+nav ul a:hover {
+  color: black;
+  transition: 0.3s;
 }
 
 @media (prefers-reduced-motion: no-preference) {
