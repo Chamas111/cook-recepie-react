@@ -3,12 +3,12 @@
 }
 
 .hero {
-  background: url("https://diabetes.org/sites/default/files/2019-08/Diabetes-Superfoods-min.jpg")
-    no-repeat;
-
+  background: url("https://diabetes.org/sites/default/files/2019-08/Diabetes-Superfoods-min.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
   height: 100vh;
+  margin: 0px;
 }
 
 /* nav ul {
@@ -25,29 +25,30 @@
 
 .header {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0);
+  background-repeat: round;
 }
 
-.header ul {
+nav {
   text-align: center;
 }
 
-.header ul li {
-  list-style: none;
+.link-item {
   display: inline-block;
-}
-
-.header ul li a {
-  display: block;
+  list-style: none;
   text-decoration: none;
   text-transform: uppercase;
   color: hwb(128 4% 55%);
-  font-size: 18px;
+  font-size: 16px;
   font-family: sans-serif;
   letter-spacing: 2px;
-  font-weight: 600;
-  padding: 25px;
+  font-weight: bolder;
+  padding: 15px;
   transition: all ease 0.5s;
+}
+
+.card-image {
+  height: 300px;
+  width: 300px;
 }
 .btn1 {
   margin-top: 5%;
@@ -55,25 +56,47 @@
   background-color: rgba(0, 0, 0, 0);
   color: rgb(157, 216, 157);
   border-style: hidden;
-
   padding: 10px;
   font-weight: 400;
   font-family: sans-serif;
 }
+
+.card-btn {
+  margin-top: 3%;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(157, 216, 157);
+  border-style: hidden;
+  padding: 10px;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+.card-btn:hover {
+  color: green;
+  border-color: green;
+  background-color: #d6d1e9d8;
+}
+
 .btn1:hover {
   color: green;
   border-color: green;
   background-color: #d6d1e9d8;
 }
-div h4 {
-  margin-top: 20%;
+
+.card-title1 {
+  list-style: none;
+  text-decoration: none;
   color: green;
 }
+/* div h4 {
+  margin-top: 20%;
+  color: green;
+} */
 /* nav ul a {
   text-decoration: none;
 }
 */
-nav ul li a:hover {
+.link-item:hover {
   background-color: #5c586d85;
 }
 
