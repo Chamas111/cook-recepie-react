@@ -3,6 +3,7 @@ import Nav from "./components/Nav";
 //import "bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 const contentful = require("contentful");
 
@@ -37,9 +38,10 @@ function App() {
       {recepies.map((recepie) => (
         <div key={recepie.sys.id}>
           <h2>{recepie.fields.name}</h2>
+
           <h3>{recepie.fields.ingridients}</h3>
           <p>{recepie.fields.instructions}</p>
-          <p>{recepie.fields.descrption}</p>
+          <p>{documentToReactComponents(recepie.fields.description)}</p>
           <img
             src={recepie.fields.image[0].fields.file.url}
             alt="image"
