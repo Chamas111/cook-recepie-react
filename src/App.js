@@ -1,6 +1,8 @@
 import "./App.css";
 
 import { useState, useEffect } from "react";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+
 const contentful = require("contentful");
 
 function App() {
@@ -20,22 +22,28 @@ function App() {
 
     client
       .getEntries()
-      .then((result) => setRecepies(result.items))
+      .then((result) => {
+        setRecepies(result.items);
+        console.log(result.items);
+        // console.log(result.items[0].fields.image[0].fields.file.url);
+      })
       .catch((err) => console.log(err));
   }, []);
 
   return (
-    <div className="App">
+    <div className="container bg-primary">
       {recepies.map((recepie) => (
         <div key={recepie.sys.id}>
           <h2>{recepie.fields.name}</h2>
+          <p>{documentToReactComponents(recepie.fields.description)}</p>
           <h3>{recepie.fields.ingridients}</h3>
           <p>{recepie.fields.instructions}</p>
-          <p>{recepie.fields.descrption}</p>
-          {/*  <img
-            src={recepie.fields.image.fields.file.url}
-            alt="image"
-            style={{ width: "200px" }} */}
+         
+         
+          {/* <img
+            src={recepie.fields.file.url}
+            style={{ width: "200px" }}
+          /> */}
         </div>
       ))}
     </div>
