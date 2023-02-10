@@ -32,7 +32,7 @@ function Recepies() {
     return (
       <>
         <div className="col-md-3" key={recep.sys.id}>
-          <Link to={`../recepies/${recep.fields.name}`}>
+          <Link to={`/recepies/${recep.sys.id}`}>
             <div className="card" style={{ width: "15rem", margin: "15px" }}>
               <img
                 src={recep.fields.image[0].fields.file.url}
@@ -50,6 +50,6 @@ function Recepies() {
       </>
     );
   });
-  return <div className="row">s{formatRecepie}</div>;
+  return <div className="row">{formatRecepie}</div>;
 }
 export default Recepies;
