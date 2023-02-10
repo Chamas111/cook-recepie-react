@@ -6,11 +6,7 @@ import { Link } from "react-router-dom";
 const contentful = require("contentful");
 
 function RecepiesDetails({ recepies }) {
-  //let { id } = useParams();
-  //let params = useParams();
   const navigate = useNavigate();
-
-  //console.log("recepie", recepie);
 
   return (
     <div class="Tabl">
