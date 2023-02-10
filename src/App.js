@@ -9,6 +9,7 @@ import RecepiesDetails from "./components/RecepiesDetails";
 
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Footer from "./components/Footer";
 import { NavLink, Routes, Route } from "react-router-dom";
 const contentful = require("contentful");
 
@@ -84,6 +85,7 @@ function App() {
   
         </div>
       </header>
+      <footer> <Footer /></footer>
     </div>
   );
 }
