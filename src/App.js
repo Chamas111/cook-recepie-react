@@ -1,10 +1,15 @@
 import "./App.css";
-import Nav from "./components/Nav";
-//import "bootstrap/dist/css/bootstrap.min.css";
+
+import Recepies from "./components/Recepies";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import Home from "./components/Home";
+import RecepiesDetails from "./components/RecepiesDetails";
 
+import Contact from "./components/Contact";
+import About from "./components/About";
+import { NavLink, Routes, Route } from "react-router-dom";
 const contentful = require("contentful");
 
 function App() {
@@ -15,60 +20,70 @@ function App() {
   const ACCESS_TOKEN = "k5W8mi1k4jg_Y3Xpk87x73nREH0Chbeq6mNbvU175AE";
 
   useEffect(() => {
-    const client = contentful.createClient(
-      {
-        space: SPACE_ID,
+    const client = contentful.createClient({
+      space: SPACE_ID,
 
-        accessToken: ACCESS_TOKEN,
-        environment: ENVIRONMENT_ID,
-      },
-      []
-    );
+      accessToken: ACCESS_TOKEN,
+      environment: ENVIRONMENT_ID,
+    });
 
     client
-      .getEntries()
-      .then((result) => {
-        setRecepies(result.items);
-        console.log(result.items);
-        // console.log(result.items[0].fields.image[0].fields.file.url);
+
+      .getEntries({
+        content_type: "recipeGr3",
       })
-      .catch((err) => console.log(err));
-  });
+      .then((response) => {
+        console.log("response.items", response.items);
+        setRecepies(response.items);
+      });
+  }, []);
+  //console.log("response.items",response.items);
 
   return (
 
-    <div className="container bg-primary">
-      {recepies.map((recepie) => (
-        <div key={recepie.sys.id}>
-          <h2>{recepie.fields.name}</h2>
-          <p>{documentToReactComponents(recepie.fields.description)}</p>
-          <h3>{recepie.fields.ingridients}</h3>
-          <p>{recepie.fields.instructions}</p>
-         
-         
-          {/* <img
-            src={recepie.fields.file.url}
-            style={{ width: "200px" }}
-          /> */}
+        
+       
 
     <div className="App">
-      <Nav />
 
-      {recepies.map((recepie) => (
-        <div key={recepie.sys.id}>
-          <h2>{recepie.fields.name}</h2>
+      <header>
+        <nav className="header">
+          <NavLink to="/" className="link-item ">
+            Home
+          </NavLink>
 
-          <h3>{recepie.fields.ingridients}</h3>
-          <p>{recepie.fields.instructions}</p>
-          <p>{documentToReactComponents(recepie.fields.description)}</p>
-          <img
-            src={recepie.fields.image[0].fields.file.url}
-            alt="image"
-            style={{ width: "200px" }}
-          />
+          <NavLink to="/recepies" className="link-item">
+            Recepies
+          </NavLink>
 
+          <NavLink to="/about" className="link-item">
+            About
+          </NavLink>
+          <NavLink to="/contact" className="link-item">
+            Contact
+          </NavLink>
+        </nav>
+        <div>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route
+              path="/recepies"
+              element={<Recepies recepies={recepies} />}
+            ></Route>
+            <Route
+              path="/recepies/:id"
+              element={<RecepiesDetails recepies={recepies} />}
+            ></Route>
+
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/contact" element={<Contact />}></Route>
+          </Routes>
+
+     
+
+  
         </div>
-      ))}
+      </header>
     </div>
   );
 }
