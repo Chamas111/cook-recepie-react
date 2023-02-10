@@ -1,34 +1,19 @@
-import RecepiesDetails from "./RecepiesDetails";
-import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const contentful = require("contentful");
 
-function Recepies() {
-  const navigate = useNavigate();
-  const [recepies, setRecepies] = useState([]);
-
-  const SPACE_ID = "5l97o5p6f7i4";
-  const ENVIRONMENT_ID = "master";
-  const ACCESS_TOKEN = "k5W8mi1k4jg_Y3Xpk87x73nREH0Chbeq6mNbvU175AE";
-
-  useEffect(() => {
-    const client = contentful.createClient(
-      {
-        space: SPACE_ID,
-
-        accessToken: ACCESS_TOKEN,
-        environment: ENVIRONMENT_ID,
-      },
-      []
-    );
-
-    client
-      .getEntries()
-      .then((result) => setRecepies(result.items))
-      .catch((err) => console.log(err));
-  });
-
-  const formatRecepie = recepies.map((recep) => {
+function Recepies({ recepies }) {
+  console.log("recepies", recepies);
+  return (
+    <ul>
+      {recepies.map((recepie) => (
+        // <Product product={product} key={product.id} />
+        <li key={`/recepies/${recepie.sys.id}`}>
+          <Link to={`/recepies/${recepie.sys.id}`}>{recepie.fields.name}</Link>
+        </li>
+      ))}
+    </ul>
+  );
+  /*  const formatRecepie = recepies.map((recep) => {
     return (
       <>
         <div className="col-md-3" key={recep.sys.id}>
@@ -50,6 +35,6 @@ function Recepies() {
       </>
     );
   });
-  return <div className="row">{formatRecepie}</div>;
+  return <div className="row">{formatRecepie}</div>; */
 }
 export default Recepies;

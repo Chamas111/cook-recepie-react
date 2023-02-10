@@ -2,15 +2,30 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { Link } from "react-router-dom";
 const contentful = require("contentful");
 
 function RecepiesDetails({ recepies }) {
-  const navigate = useNavigate();
+  const { id } = useParams();
 
-  return (
+  console.log("recepieuuuuuuuuuuuu", recepies);
+  console.log("recepieiddddddddddddd", id);
+  const recepie = recepies.find((p) => p.sys.id == id);
+  const navigate = useNavigate();
+  console.log("recepiei", recepie);
+  return recepie ? (
     <div class="Tabl">
-      <table>
+      <h3>
+        this is recepie {recepie.sys.id}: {recepie.fields.name}
+      </h3>
+
+      <button onClick={() => navigate(-1)}>Go back</button>
+    </div>
+  ) : (
+    <h3>No Product Matched with id {id}</h3>
+  );
+
+  {
+    /*   <table>
         <tr>
           <td>id</td>
           <td>{recepies.sys.id}</td>
@@ -37,17 +52,16 @@ function RecepiesDetails({ recepies }) {
           <td>instructions</td>
           <td>{recepies.fields.instructions}</td>
         </tr>
-        {/*   <tr>
+           <tr>
           <td>description</td>
           <td>{documentToReactComponents(recepie.fields.description)}</td>
-        </tr> */}
+        </tr> 
         <Link to={"../recepies"}>
           <button type="button" class="btn btn-outline-dark">
             ← GoBack
           </button>
         </Link>
-      </table>
-    </div>
-  );
+      </table> */
+  }
 }
 export default RecepiesDetails;
