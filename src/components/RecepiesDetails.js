@@ -1,4 +1,4 @@
-//import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -13,10 +13,35 @@ function RecepiesDetails({ recepies }) {
   const navigate = useNavigate();
   console.log("recepiei", recepie);
   return recepie ? (
-    <div class="Tabl">
-      <h3>
-        this is recepie {recepie.sys.id}: {recepie.fields.name}
-      </h3>
+    <div className="">
+      <table key={recepie.sys.id}>
+        <tr>
+          <td>Name</td>
+          <td>{recepie.fields.name}</td>
+        </tr>
+        <tr>
+          <td>description</td>
+          <td>{documentToReactComponents(recepie.fields.description)}</td>
+        </tr>
+        <tr>
+          <td>Image</td>
+          <td>
+            <img
+              src={recepie.fields.image[0].fields.file.url}
+              alt={recepie.fields.name}
+              style={{ width: "200px" }}
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>ingridients</td>
+          <td>{recepie.fields.ingridients}</td>
+        </tr>
+        <tr>
+          <td>instructions</td>
+          <td>{recepie.fields.instructions}</td>
+        </tr>
+      </table>
 
       <button onClick={() => navigate(-1)}>Go back</button>
     </div>
