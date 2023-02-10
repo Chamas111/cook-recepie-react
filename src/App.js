@@ -28,6 +28,7 @@ function App() {
     });
 
     client
+
       .getEntries({
         content_type: "recipeGr3",
       })
@@ -37,8 +38,14 @@ function App() {
       });
   }, []);
   //console.log("response.items",response.items);
+
   return (
+
+        
+       
+
     <div className="App">
+
       <header>
         <nav className="header">
           <NavLink to="/" className="link-item ">
@@ -71,6 +78,10 @@ function App() {
             <Route path="/about" element={<About />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
           </Routes>
+
+     
+
+  
         </div>
       </header>
     </div>
