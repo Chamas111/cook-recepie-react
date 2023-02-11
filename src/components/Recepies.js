@@ -4,6 +4,7 @@ const contentful = require("contentful");
 
 function Recepies({ recepies }) {
   const formatRecepie = recepies.map((recep) => {
+    //console.log(recep.fields.instructions);
     return (
       <>
         <div>
