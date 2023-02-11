@@ -173,8 +173,8 @@ nav {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: 10px;
-  column-count: 1;
+  margin-left: 0px;
+  text-align: justify;
 }
 .recipe-card__ingredients li {
   margin-bottom: 5px;

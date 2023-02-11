@@ -1,11 +1,14 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
 
 const contentful = require("contentful");
 
 function RecepiesDetails({ recepies }) {
   const { id } = useParams();
+  const [key, setKey] = useState("Ingredients");
 
   const recepie = recepies.find((p) => p.sys.id == id);
 
@@ -25,20 +28,27 @@ function RecepiesDetails({ recepies }) {
           {documentToReactComponents(recepie.fields.description)}
         </h2>
 
-        <ul class="recipe-card__nav">
-          <li>
-            <h3 class="active">Ingredients</h3>
-          </li>
-          <li>
-            <h3>Method</h3>
-          </li>
-        </ul>
-
-        <ul class="recipe-card__ingredients">
-          {recepie.fields.ingridients.map((q) => (
-            <li>{q}</li>
-          ))}
-        </ul>
+        <Tabs
+          defaultActiveKey="profile"
+          className="mb-3"
+          activeKey={key}
+          onSelect={(k) => setKey(k)}
+        >
+          <Tab eventKey="Ingredients" title="Ingredients">
+            <ul class="recipe-card__ingredients">
+              {recepie.fields.ingridients.map((q) => (
+                <li>{q}</li>
+              ))}
+            </ul>
+          </Tab>
+          <Tab eventKey="Method" title="Method">
+            <ul class="recipe-card__ingredients">
+              {recepie.fields.instructions.map((inst) => (
+                <li>{inst}</li>
+              ))}
+            </ul>
+          </Tab>
+        </Tabs>
       </div>
       <button class="btn1 btn1-shadow" onClick={() => navigate(-1)}>
         Go back
