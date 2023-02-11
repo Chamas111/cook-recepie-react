@@ -1,4 +1,3 @@
-
 .App {
   text-align: center;
 }
@@ -12,18 +11,6 @@
   margin: 0px;
 }
 
-/* nav ul {
-  display: flex;
-  justify-content: space-around;
-  column-gap: 30px;
-  justify-content: flex-end;
-  background-color: transparent;
-  margin: 0;
-  padding: 20px;
-
-  list-style: none;
-} */
-
 .header {
   width: 100%;
   background-repeat: round;
@@ -31,6 +18,13 @@
 
 nav {
   text-align: center;
+}
+.text {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: medium;
+  text-align: justify;
 }
 
 .link-item {
@@ -47,31 +41,26 @@ nav {
   transition: all ease 0.5s;
 }
 
-.card-image {
-  height: 200px;
-  width: 200px;
-}
 .btn1 {
-  margin-top: 5%;
-  font-size: 30px;
+  margin-top: 10%;
+  font-size: 25px;
   background-color: rgba(0, 0, 0, 0);
   color: rgb(157, 216, 157);
   border-style: hidden;
   padding: 10px;
   font-weight: 400;
   font-family: sans-serif;
+  box-shadow: 5px 5px 15px;
+  box-sizing: border-box;
+  margin-bottom: 10%;
+}
+.btn1-shadow {
+  color: red;
+  font-family: sans-serif;
+  box-shadow: 5px 5px 15px;
+  box-sizing: border-box;
 }
 
-.card-btn {
-  margin-top: 3%;
-  font-size: 20px;
-  background-color: rgba(0, 0, 0, 0);
-  color: rgb(157, 216, 157);
-  border-style: hidden;
-  padding: 10px;
-  font-weight: 400;
-  font-family: sans-serif;
-}
 .card-btn:hover {
   color: green;
   border-color: green;
@@ -89,14 +78,7 @@ nav {
   text-decoration: none;
   color: green;
 }
-/* div h4 {
-  margin-top: 20%;
-  color: green;
-} */
-/* nav ul a {
-  text-decoration: none;
-}
-*/
+
 .link-item:hover {
   background-color: #5c586d85;
 }
@@ -131,115 +113,33 @@ nav {
   }
 }
 
-
-
-.App {
-  text-align: center;
+.card-shadow1 {
+  color: black;
+  box-shadow: 5px 5px 15px;
+  box-sizing: border-box;
+  min-width: 287px;
+  min-height: 500px;
 }
 
-.hero {
-  background: url("https://diabetes.org/sites/default/files/2019-08/Diabetes-Superfoods-min.jpg")
-    no-repeat;
+#card-wrapper {
+  min-width: 300px;
+  min-height: 750px;
+  color: black;
+  box-shadow: 5px 5px 15px;
+  font-family: "Abril Fatface", cursive;
+  order: 2;
+  margin-top: 50px;
+}
 
+.recepie-hero {
+  background: url("https://www.nycfoodpolicy.org/wp-content/uploads/2021/03/shutterstock_645842161-2.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
-  height: 100vh;
+  height: 50vh;
+  margin: 0px;
 }
 
-/* nav ul {
-  display: flex;
-  justify-content: space-around;
-  column-gap: 30px;
-  justify-content: flex-end;
-  background-color: transparent;
-  margin: 0;
-  padding: 20px;
-
-  list-style: none;
-} */
-
-.header {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.header ul {
-  text-align: center;
-}
-
-.header ul li {
-  list-style: none;
-  display: inline-block;
-}
-
-.header ul li a {
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: hwb(128 4% 55%);
-  font-size: 18px;
-  font-family: sans-serif;
-  letter-spacing: 2px;
-  font-weight: 600;
-  padding: 25px;
-  transition: all ease 0.5s;
-}
-.btn1 {
-  margin-top: 5%;
-  font-size: 30px;
-  background-color: rgba(0, 0, 0, 0);
-  color: rgb(157, 216, 157);
-  border-style: hidden;
-
-  padding: 10px;
-  font-weight: 400;
-  font-family: sans-serif;
-}
-.btn1:hover {
-  color: green;
-  border-color: green;
-  background-color: #d6d1e9d8;
-}
-div h4 {
+.card-margin {
   margin-top: 20%;
-  color: green;
 }
-/* nav ul a {
-  text-decoration: none;
-}
-*/
-nav ul li a:hover {
-  background-color: #5c586d85;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
