@@ -1,29 +1,48 @@
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Link } from "react-router-dom";
 const contentful = require("contentful");
 
 function Recepies({ recepies }) {
   const formatRecepie = recepies.map((recep) => {
+    //console.log(recep.fields.instructions);
     return (
       <>
-        <div className="col-md-3" key={recep.sys.id}>
-          <Link to={`/recepies/${recep.sys.id}`}>
-            <div className="card" style={{ width: "15rem", margin: "15px" }}>
-              <img
-                src={recep.fields.image[0].fields.file.url}
-                className="card-img-top"
-                alt={recep.fields.name}
-              />
-              <div className="card-body">
-                <h5 className="link-item">{recep.fields.name}</h5>
+        <div>
+          <div
+            class="card-shadow1"
+            style={{ width: "18rem" }}
+            key={recep.sys.id}
+          >
+            <img
+              src={recep.fields.image[0].fields.file.url}
+              class="card-img-top"
+              alt={recep.fields.name}
+              style={{ width: "287px", height: "270px" }}
+            />
 
-                <button className="btn1">view more</button>
+            <div class="card-body">
+              <div class="container">
+                <h5 class="card-title1 p-3">{recep.fields.name}</h5>
+                <p class="text">
+                  {documentToReactComponents(recep.fields.description)}
+                </p>
               </div>
             </div>
+          </div>
+          <Link to={`/recepies/${recep.sys.id}`}>
+            <button class="btn1 btn1-shadow">More Details</button>
           </Link>
         </div>
       </>
     );
   });
-  return <div className="row">{formatRecepie}</div>;
+  return (
+    <>
+      <div class=" recepie-hero mb-5 "></div>
+      <div class="container d-flex gap-4 justify-content-arround flex-wrap ">
+        {formatRecepie}
+      </div>
+    </>
+  );
 }
 export default Recepies;

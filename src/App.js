@@ -34,19 +34,13 @@ function App() {
         content_type: "recipeGr3",
       })
       .then((response) => {
-        console.log("response.items", response.items);
         setRecepies(response.items);
       });
   }, []);
   //console.log("response.items",response.items);
 
   return (
-
-        
-       
-
     <div className="App">
-
       <header>
         <nav className="header">
           <NavLink to="/" className="link-item ">
@@ -79,13 +73,11 @@ function App() {
             <Route path="/about" element={<About />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
           </Routes>
-
-     
-
-  
         </div>
       </header>
-      <footer> <Footer /></footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
