@@ -143,7 +143,17 @@ nav {
 .card-margin {
   margin-top: 20%;
 }
+.border {
+  transition: 0.5s ease;
+}
 
+.border:hover {
+  box-shadow: 1px 1px #373737, 2px 2px #373737, 3px 3px #373737, 4px 4px #373737,
+    5px 5px #373737, 6px 6px #373737;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+  transition: 0.5s ease;
+}
 /*recepie-details*/
 
 .recipe-card-1 {
