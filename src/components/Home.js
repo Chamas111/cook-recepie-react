@@ -1,22 +1,46 @@
 import React from "react";
+import Carousel from "react-bootstrap/Carousel";
+import Recipe1 from "./../images/Recipe1.jpg";
+import Recipe2 from "./../images/Recipe2.jpg";
+import Recipe3 from "./../images/Recipe3.jpg";
 
 function Home() {
   return (
-    <div className="hero">
-      <div>
-        <br></br>
+    <>
+      <Carousel fade>
+        <Carousel.Item interval={1000}>
+          <img className="d-block w-100" src={Recipe1} alt="First slide" />
+          <Carousel.Caption>
+            <h3>
+              “Cooking is like love. It should be entered into with abandon or
+              not at all.”
+            </h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={1000}>
+          <img className="d-block w-100" src={Recipe2} alt="Second slide" />
 
-        <h4 className="container">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s.
-        </h4>
-        <br></br>
-        <button type="button" className="btn1">
-          MORE INFO
-        </button>
-      </div>
-    </div>
+          <Carousel.Caption>
+            <h3>
+              “Cooking is like painting or writing a song. Just as there are
+              only so many notes or colors, there are only so many flavors—it’s
+              how you combine them that sets you apart.”
+            </h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={1000}>
+          <img className="d-block w-100" src={Recipe3} alt="Third slide" />
+
+          <Carousel.Caption>
+            <h3>
+              “Cooking with kids is not just about ingredients, recipes, and
+              cooking. It’s about harnessing imagination, empowerment, and
+              creativity.”
+            </h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+    </>
   );
 }
 

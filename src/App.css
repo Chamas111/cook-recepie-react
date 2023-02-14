@@ -2,23 +2,43 @@
   text-align: center;
 }
 
-.hero {
-  background: url("https://diabetes.org/sites/default/files/2019-08/Diabetes-Superfoods-min.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
-  height: 100vh;
-  margin: 0px;
+img {
+  float: left;
+}
+
+.logoName {
+  float: left;
+  font-weight: bold;
+  font-style: italic;
+  font-size: x-large;
+}
+
+.carousel-caption {
+  width: 70%;
+  top: 40%;
+  height: fit-content;
+  bottom: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(157, 216, 157, 0.5);
+  border-radius: 1%;
+}
+
+.carousel-caption h3 {
+  color: black;
 }
 
 .header {
   width: 100%;
   background-repeat: round;
+
 }
 
 nav {
   text-align: center;
 }
+
 .text {
   color: black;
   font-family: "Roboto", sans-serif;
@@ -32,13 +52,18 @@ nav {
   list-style: none;
   text-decoration: none;
   text-transform: uppercase;
-  color: hwb(128 4% 55%);
+  color: hwb(0 3% 97%);
   font-size: 16px;
   font-family: sans-serif;
   letter-spacing: 2px;
   font-weight: bolder;
   padding: 15px;
   transition: all ease 0.5s;
+}
+
+.card-image {
+  height: 200px;
+  width: 200px;
 }
 
 .btn1 {
@@ -54,6 +79,7 @@ nav {
   box-sizing: border-box;
   margin-bottom: 10%;
 }
+
 .btn1-shadow {
   color: red;
   font-family: sans-serif;
@@ -79,8 +105,49 @@ nav {
   color: green;
 }
 
+.form {
+  box-sizing: border-box;
+  background-color: rgb(241, 159, 159);
+  border-radius: 5px;
+  width: 550px;
+  margin: 20px auto;
+  padding: 20px;
+  /* height: 600px; */
+}
+
+.form-body {
+  text-align: left;
+  padding: 20px 10px;
+}
+
+.form-body>* {
+  padding: 5px;
+}
+
+.form__label {
+  width: 40%;
+}
+
+.form_input {
+  width: 60%;
+}
+
+.fotter:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* div h4 {
+  margin-top: 20%;
+  color: green;
+} */
+/* nav ul a {
+  text-decoration: none;
+}
+*/
+
 .link-item:hover {
-  background-color: #5c586d85;
+  background-color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -108,6 +175,7 @@ nav {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -121,6 +189,7 @@ nav {
   min-height: 500px;
 }
 
+
 #card-wrapper {
   min-width: 300px;
   min-height: 750px;
@@ -130,6 +199,7 @@ nav {
   order: 2;
   margin-top: 50px;
 }
+
 
 .recepie-hero {
   background: url("https://www.nycfoodpolicy.org/wp-content/uploads/2021/03/shutterstock_645842161-2.jpg");
@@ -143,6 +213,7 @@ nav {
 .card-margin {
   margin-top: 20%;
 }
+
 .border {
   transition: 0.5s ease;
 }
@@ -154,6 +225,7 @@ nav {
   transform: translateX(-3px);
   transition: 0.5s ease;
 }
+
 /*recepie-details*/
 
 .recipe-card-1 {
@@ -164,14 +236,37 @@ nav {
   width: 300px;
   margin: 50px auto;
 }
+
 .recipe-card__body {
   padding: 20px;
 }
+
 .recipe-card__heading {
   padding: 0;
   margin: 0 0 0;
   color: #444;
 }
+
+
+
+
+
+
+
+
+
+
+
+.recipe-card__body {
+  padding: 20px;
+}
+
+.recipe-card__heading {
+  padding: 0;
+  margin: 0 0 0;
+  color: #444;
+}
+
 .recipe-card__subhead {
   font-size: 15px;
   margin: 20px;
@@ -179,6 +274,7 @@ nav {
   margin-bottom: 30px;
   text-align: justify;
 }
+
 .recipe-card__ingredients {
   list-style: none;
   margin: 0;
@@ -186,8 +282,10 @@ nav {
   margin-left: 0px;
   text-align: justify;
 }
+
 .recipe-card__ingredients li {
   margin-bottom: 5px;
+
 }
 
 .recipe-card__ingredients li:before {
@@ -201,6 +299,7 @@ nav {
   padding: 0;
   border-bottom: 1px solid #eb9376;
 }
+
 .recipe-card__nav li {
   display: inline-block;
   margin-right: 30px;
@@ -210,6 +309,7 @@ nav {
   margin: 0;
   padding: 0;
 }
+
 .recipe-card__nav h3:after {
   content: "";
   display: block;
@@ -219,9 +319,11 @@ nav {
   border-bottom: 5px solid #eb9376;
   transition: width 250ms ease-in-out 0s;
 }
+
 .recipe-card__nav h3:hover {
   cursor: pointer;
 }
+
 .recipe-card__nav h3:hover:after,
 .recipe-card__nav h3.active:after {
   width: 100%;
@@ -231,7 +333,12 @@ nav {
   .recipe-card-1 {
     width: 600px;
   }
-  .recipe-card__ingredients {
-    column-count: 2;
+
+  to {
+    transform: rotate(360deg);
   }
+}
+
+.recipe-card__ingredients {
+  column-count: 2;
 }
