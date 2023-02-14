@@ -9,7 +9,7 @@ function Recepies({ recepies }) {
       <>
         <div>
           <div
-            class="card-shadow1"
+            class="card-shadow1 border "
             style={{ width: "18rem" }}
             key={recep.sys.id}
           >
