@@ -9,6 +9,7 @@ import RecepiesDetails from "./components/RecepiesDetails";
 import RegistrationForm from "./components/Form";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Footer from "./components/Footer";
 import { NavLink, Routes, Route } from "react-router-dom";
 import logo from "./images/LogoCok.png";
 const contentful = require("contentful");
@@ -33,7 +34,6 @@ function App() {
         content_type: "recipeGr3",
       })
       .then((response) => {
-        console.log("response.items", response.items);
         setRecepies(response.items);
       });
 
@@ -66,9 +66,7 @@ function App() {
           </NavLink>
         </nav>
       </header>
-      <hr></hr>
-      <hr></hr>
-      <hr></hr>
+
       <div>
         <Routes>
           <Route path="/" element={<Home recepies={recepies} />}></Route>
@@ -86,6 +84,9 @@ function App() {
           <Route path="/login" element={<RegistrationForm />}></Route>
         </Routes>
       </div>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
