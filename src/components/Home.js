@@ -9,7 +9,12 @@ function Home() {
     <>
       <Carousel fade>
         <Carousel.Item interval={1000}>
-          <img className="d-block w-100" src={Recipe1} alt="First slide" />
+          <img
+            className="d-block w-100"
+            src={Recipe1}
+            alt="First slide"
+            style={{ height: "90vh" }}
+          />
           <Carousel.Caption>
             <h3>
               “Cooking is like love. It should be entered into with abandon or
@@ -18,7 +23,12 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={1000}>
-          <img className="d-block w-100" src={Recipe2} alt="Second slide" />
+          <img
+            className="d-block w-100"
+            src={Recipe2}
+            alt="Second slide"
+            style={{ height: "90vh" }}
+          />
 
           <Carousel.Caption>
             <h3>
@@ -29,7 +39,12 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={1000}>
-          <img className="d-block w-100" src={Recipe3} alt="Third slide" />
+          <img
+            className="d-block w-100"
+            src={Recipe3}
+            alt="Third slide"
+            style={{ height: "90vh" }}
+          />
 
           <Carousel.Caption>
             <h3>

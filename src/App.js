@@ -1,6 +1,7 @@
 import "./App.css";
 
 import Recepies from "./components/Recepies";
+import Form from "./components/Form";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
@@ -46,9 +47,11 @@ function App() {
   return (
     <div className="App">
       <header>
-        <nav className=" fixed-top" style={{ background: "lightblue" }}>
+        <nav style={{ background: "lightblue" }}>
           <img src={logo} width={50} />
-          <p className="logoName"> Pinch Of Salt</p>
+          <NavLink to="/" className="logoName">
+            Pinch Of Salt
+          </NavLink>
           <NavLink to="/" className="link-item ">
             Home
           </NavLink>
@@ -84,9 +87,8 @@ function App() {
           <Route path="/login" element={<RegistrationForm />}></Route>
         </Routes>
       </div>
-      <footer>
-        <Footer />
-      </footer>
+
+      <Footer />
     </div>
   );
 }
