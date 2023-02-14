@@ -11,11 +11,14 @@ img {
   font-weight: bold;
   font-style: italic;
   font-size: x-large;
+  text-decoration: none;
+  list-style: none;
+  color: black;
 }
 
 .carousel-caption {
-  width: 70%;
-  top: 40%;
+  width: 65%;
+  top: 45%;
   height: fit-content;
   bottom: auto;
   text-align: center;
@@ -32,7 +35,6 @@ img {
 .header {
   width: 100%;
   background-repeat: round;
-
 }
 
 nav {
@@ -87,12 +89,6 @@ nav {
   box-sizing: border-box;
 }
 
-.card-btn:hover {
-  color: green;
-  border-color: green;
-  background-color: #d6d1e9d8;
-}
-
 .btn1:hover {
   color: green;
   border-color: green;
@@ -120,7 +116,7 @@ nav {
   padding: 20px 10px;
 }
 
-.form-body>* {
+.form-body > * {
   padding: 5px;
 }
 
@@ -189,7 +185,6 @@ nav {
   min-height: 500px;
 }
 
-
 #card-wrapper {
   min-width: 300px;
   min-height: 750px;
@@ -199,7 +194,6 @@ nav {
   order: 2;
   margin-top: 50px;
 }
-
 
 .recepie-hero {
   background: url("https://www.nycfoodpolicy.org/wp-content/uploads/2021/03/shutterstock_645842161-2.jpg");
@@ -247,16 +241,6 @@ nav {
   color: #444;
 }
 
-
-
-
-
-
-
-
-
-
-
 .recipe-card__body {
   padding: 20px;
 }
@@ -285,7 +269,6 @@ nav {
 
 .recipe-card__ingredients li {
   margin-bottom: 5px;
-
 }
 
 .recipe-card__ingredients li:before {
