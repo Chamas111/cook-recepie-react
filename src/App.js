@@ -69,7 +69,7 @@ function App() {
 
       <div>
         <Routes>
-          <Route path="/" element={<Home recepies={recepies} />}></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route
             path="/recepies"
             element={<Recepies recepies={recepies} />}

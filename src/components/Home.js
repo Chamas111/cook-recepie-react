@@ -1,9 +1,8 @@
 import React from "react";
-
-import img from "./../images/cuisine-food-india-indian-wallpaper-preview.jpg";
-import img1 from "./../images/card-images1.jpg";
-import img2 from "./../images/card-imges.jpg";
 import Carousel from "react-bootstrap/Carousel";
+import Recipe1 from "./../images/Recipe1.jpg";
+import Recipe2 from "./../images/Recipe2.jpg";
+import Recipe3 from "./../images/Recipe3.jpg";
 
 function Home() {
   return (
