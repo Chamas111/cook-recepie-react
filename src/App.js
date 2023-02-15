@@ -13,11 +13,12 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import { NavLink, Routes, Route } from "react-router-dom";
 import logo from "./images/LogoCok.png";
+import { Link } from "react-router-dom";
 const contentful = require("contentful");
 
 function App() {
   const [recepies, setRecepies] = useState([]);
-  const [familyMealRecipe, setFamilyMealRecipe] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
 
   const SPACE_ID = "5l97o5p6f7i4";
   const ENVIRONMENT_ID = "master";
@@ -73,9 +74,58 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home />}></Route>
+
           <Route
             path="/recepies"
-            element={<Recepies recepies={recepies} />}
+            element={
+              <>
+                <div className="container d-flex gap-5 justify-content-arround flex-wrap ">
+                  <Recepies
+                    recepies={recepies}
+                    setSearchInput={setSearchInput}
+                  />
+
+                  {recepies
+                    .filter((recipe) =>
+                      recipe.fields.name
+                        .toLowerCase()
+                        .includes(searchInput.toLowerCase())
+                    )
+                    .map((recipe) => (
+                      <div>
+                        <div
+                          class="card-shadow1 border "
+                          style={{ width: "18rem" }}
+                          key={recipe.sys.id}
+                        >
+                          <img
+                            src={recipe.fields.image[0].fields.file.url}
+                            class="card-img-top"
+                            alt={recipe.fields.name}
+                            style={{ width: "287px", height: "270px" }}
+                          />
+
+                          <div class="card-body">
+                            <div class="container">
+                              <h5 class="card-title1 p-3">
+                                {recipe.fields.name}
+                              </h5>
+                              <p class="text">
+                                {documentToReactComponents(
+                                  recipe.fields.description
+                                )}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <Link to={`/recepies/${recipe.sys.id}`}>
+                          <button class="btn1 btn1-shadow">More Details</button>
+                        </Link>
+                      </div>
+                    ))}
+                </div>
+              </>
+            }
           ></Route>
           <Route
             path="/recepies/:id"
