@@ -2,7 +2,10 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Link } from "react-router-dom";
 const contentful = require("contentful");
 
-function Recepies({ recepies }) {
+function Recepies({ recepies, setSearchInput }) {
+  const handleSearchChange = (e) => {
+    setSearchInput(e.target.value);
+  };
   const formatRecepie = recepies.map((recep) => {
     //console.log(recep.fields.instructions);
     return (
@@ -38,10 +41,25 @@ function Recepies({ recepies }) {
   });
   return (
     <>
-      <div class=" recepie-hero mb-5 "></div>
-      <div class="container d-flex gap-4 justify-content-arround flex-wrap ">
-        {formatRecepie}
-      </div>
+      {
+        <div className="container">
+          <div className=" recepie-hero mb-5 ">
+            <div className="flexbox">
+              <div className="search">
+                <h3>Click on search icon, then type your Recipe.</h3>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Search . . ."
+                    required
+                    onChange={handleSearchChange}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
     </>
   );
 }
