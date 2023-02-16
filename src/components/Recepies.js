@@ -12,7 +12,7 @@ function Recepies({ recepies, setSearchInput }) {
       <>
         <div>
           <div
-            class="card-shadow1 border bg-light"
+            class="card-shadow1 border "
             style={{ width: "18rem" }}
             key={recep.sys.id}
           >
@@ -25,7 +25,7 @@ function Recepies({ recepies, setSearchInput }) {
 
             <div class="card-body">
               <div class="container">
-                <h5 class="card-title1 p-3 mt-5">{recep.fields.name}</h5>
+                <h5 class="card-title1 p-3">{recep.fields.name}</h5>
                 <p class="text">
                   {documentToReactComponents(recep.fields.description)}
                 </p>
@@ -33,7 +33,7 @@ function Recepies({ recepies, setSearchInput }) {
             </div>
           </div>
           <Link to={`/recepies/${recep.sys.id}`}>
-            <button class="btn1 btn1-shadow bg-light">More Details</button>
+            <button class="btn1 btn1-shadow">More Details</button>
           </Link>
         </div>
       </>
