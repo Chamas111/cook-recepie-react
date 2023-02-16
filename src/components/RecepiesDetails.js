@@ -111,8 +111,5 @@ function RecepiesDetails() {
     */
     <h3>No Product Matched with id {id}</h3>
   );
-
-  {
-  }
 }
 export default RecepiesDetails;

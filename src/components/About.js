@@ -22,7 +22,7 @@ function About() {
           <ul></ul>
         </li>
         <li>
-          <strong>Chamas And Kevin</strong> - Front End Developer
+          <strong>Chamas And Kevin</strong> heroes of hyrule
           <ul>
             <li>
               Chamas and I have both had a passion for food since we were young,
@@ -36,7 +36,7 @@ function About() {
           </ul>
         </li>
         <li>
-          <strong>Prinyanka And Christian</strong> - Back End Developer
+          <strong>Prinyanka And Christian</strong> collectors of the chaos emerald
           <ul>
             <li>
               The idea for our food app came about when my friend and I were

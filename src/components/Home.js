@@ -3,6 +3,9 @@ import Carousel from "react-bootstrap/Carousel";
 import Recipe1 from "./../images/Recipe1.jpg";
 import Recipe2 from "./../images/Recipe2.jpg";
 import Recipe3 from "./../images/Recipe3.jpg";
+
+import Team from "./Team";
+
 import Recipe4 from "./../images/Recepies_1.png";
 
 function Home() {
@@ -56,6 +59,9 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+
+      <Team />
+
       <section id="features" className="features">
         <div className="container" data-aos="fade-up">
           <div className="row mt-3 section2-title">
