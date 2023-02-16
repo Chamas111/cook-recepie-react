@@ -13,7 +13,7 @@ img {
   font-size: x-large;
   text-decoration: none;
   list-style: none;
-  color: black;
+  color: white;
 }
 
 .carousel-caption {
@@ -639,4 +639,110 @@ nav {
   font-size: 15px;
   color: #848484;
   margin-left: 60px;
+}
+
+/*About US*/
+/*About US*/
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #feffff;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+a {
+  /* Typography Declrations */
+  font-weight: bold;
+  text-decoration: none;
+  color: #d1dbbd;
+}
+
+a:hover {
+  /* Tyopography Declarations */
+  color: #fcfff5;
+}
+
+a:visited {
+  /* Typography Declarations */
+  color: #d1dbbd;
+}
+
+h1 {
+  color: #3e606f;
+}
+
+h2 {
+  color: #193441;
+}
+.masthead-heading,
+.masthead-intro {
+  text-align: center;
+  color: #fff;
+}
+.masthead {
+  padding: 6em 0;
+  background-image: url("https://www.nycfoodpolicy.org/wp-content/uploads/2021/03/shutterstock_645842161-2.jpg");
+
+  background-color: #1faaff;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.masthead-intro {
+  margin-bottom: 0.1em;
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 2em;
+}
+.masthead-heading {
+  margin-top: -0.2em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 6em;
+  letter-spacing: -0.02em;
+}
+
+.masthead-heading:hover {
+  color: red;
+}
+.questions-section h2 {
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.questions-section h1 {
+  font-family: "Gentium Book Basic", Georgia, serif;
+
+  color: green;
+}
+.introduction-section,
+.location-section,
+.questions-section {
+  max-width: 38em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+.introduction-section h1 {
+  color: green;
+}
+.location-section h1 {
+  color: green;
+}
+
+/* footer */
+.link-footer {
+  display: inline-block;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: hwb(0 85% 13%);
+  font-size: 15px;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  padding: 15px;
+  transition: all ease 0.5s;
+}
+.link-footer:hover {
+  color: green;
 }
