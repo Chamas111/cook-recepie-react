@@ -590,3 +590,51 @@ nav {
     transform: rotate(360deg);
   }
 }
+
+.leaflet-container {
+  height: 500px;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+
+.section2-title {
+  color: green;
+  padding-bottom: 50px;
+}
+.features {
+  padding-top: 5px;
+  background-color: #333;
+}
+
+.features p {
+  text-align: justify;
+  color: white;
+}
+.features h4 {
+  text-align: justify;
+  color: green;
+}
+.features .icon-box {
+  padding-left: 15px;
+}
+
+.features .icon-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 5px 0 10px 60px;
+}
+
+.features .icon-box i {
+  font-size: 48px;
+  float: left;
+  color: #ffc451;
+}
+
+.features .icon-box p {
+  font-size: 15px;
+  color: #848484;
+  margin-left: 60px;
+}

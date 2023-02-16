@@ -1,7 +1,17 @@
 import React from "react";
-import { MapContainer, TileLayer, useMap, Popup, Marker } from "react-leaflet";
-const position = [51.505, -0.09];
+import L from "leaflet";
+
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+
+import "leaflet/dist/leaflet.css";
 function Contact() {
+  const position = [52.45588949917658, 13.389077598470479];
+  const markerIcon = new L.Icon({
+    iconUrl:
+      "https://www.ockert-cnc.de/wp-content/uploads/2016/12/map-marker-icon.png",
+    iconSize: [45, 45],
+  });
+
   return (
     <>
       <section id="contact" className="contact">
@@ -32,12 +42,18 @@ function Contact() {
                   <h4>Call:</h4>
                   <p>+49 177 0000000</p>
                 </div>
-
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                  style={{ border: "0", width: "100%", height: "290px" }}
-                  allowFullScreen
-                ></iframe>
+                <MapContainer
+                  center={position}
+                  zoom={16}
+                  scrollWheelZoom={true}
+                >
+                  <TileLayer url="https://api.maptiler.com/maps/basic-v2/256/{z}/{x}/{y}.png?key=LjeASTEOm5W62yk97NZq" />
+                  <Marker position={position} icon={markerIcon}>
+                    <Popup>
+                      Lorenzweg 5, 12099 Berlin <br /> WBS Coding School.
+                    </Popup>
+                  </Marker>
+                </MapContainer>
               </div>
             </div>
 

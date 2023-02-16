@@ -13,6 +13,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
+    "boxicons": "^2.1.4",
     "contentful": "^9.3.0",
     "leaflet": "^1.9.3",
     "mdbreact": "^5.2.0",
