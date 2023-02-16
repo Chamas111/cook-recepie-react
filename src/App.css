@@ -640,3 +640,21 @@ nav {
   color: #848484;
   margin-left: 60px;
 }
+
+/* footer */
+.link-footer {
+  display: inline-block;
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: hwb(0 85% 13%);
+  font-size: 15px;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  padding: 15px;
+  transition: all ease 0.5s;
+}
+.link-footer:hover {
+  color: green;
+}

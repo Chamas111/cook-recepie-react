@@ -7,24 +7,25 @@ import { NavLink, Routes, Route } from "react-router-dom";
 
 export default function Footer(){
     return (
-        <Navbar bg="light" variant="light" expand="lg">
+        
+        <Navbar bg="dark" variant="dark" expand="lg">
           <Container>
-          <Navbar.Brand href="#home">Code Cook's Recipes</Navbar.Brand>
+          <Navbar.Brand href="/">Pinch Of Salt</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
                 
-                <NavLink to="/" className="link-item ">
+                <NavLink to="/" className="link-footer">
             Home
           </NavLink>
-          <NavLink to="/recepies" className="link-item">
+          <NavLink to="/recepies" className="link-footer">
             Recipes
           </NavLink>
 
-          <NavLink to="/about" className="link-item">
+          <NavLink to="/about" className="link-footer">
             About
           </NavLink>
-          <NavLink to="/contact" className="link-item">
+          <NavLink to="/contact" className="link-footer">
             Contact
           </NavLink>
                
@@ -32,7 +33,7 @@ export default function Footer(){
             </Navbar.Collapse>
             <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            @2023 WBS WD#35-Group 3
+            @2023 Prinyanka / Ahmed / Kevin / Cristian
           </Navbar.Text>
         </Navbar.Collapse>
           </Container>
