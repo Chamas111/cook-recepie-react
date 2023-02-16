@@ -3,6 +3,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Recipe1 from "./../images/Recipe1.jpg";
 import Recipe2 from "./../images/Recipe2.jpg";
 import Recipe3 from "./../images/Recipe3.jpg";
+import Team from "./Team";
 
 function Home() {
   return (
@@ -40,6 +41,7 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <Team />
     </>
   );
 }
