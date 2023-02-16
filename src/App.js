@@ -11,14 +11,9 @@ import RegistrationForm from "./components/Form";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Footer from "./components/Footer";
-
 import { NavLink, Routes, Route } from "react-router-dom";
 import logo from "./images/LogoCok.png";
-
-import { color } from "@mui/system";
-
 import { Link } from "react-router-dom";
-
 const contentful = require("contentful");
 
 function App() {
@@ -53,25 +48,6 @@ function App() {
   return (
     <div className="App">
       <header>
-
-        <nav style={{ background: "#05180b", color: "white" }}>
-          <img src={logo} width={50} />
-          <p className="logoName"> Pinch Of Salt</p>
-          <div className="navbarItems">
-            <NavLink to="/" className="link-item ">
-              Home
-            </NavLink>
-            <NavLink to="/recepies" className="link-item">
-              Recepies
-            </NavLink>
-            <NavLink to="/about" className="link-item">
-              About
-            </NavLink>
-            <NavLink to="/contact" className="link-item">
-              Contact
-            </NavLink>
-          </div>
-
         <nav style={{ background: "lightblue" }}>
           <img src={logo} width={50} />
           <NavLink to="/" className="logoName">
@@ -92,9 +68,9 @@ function App() {
           <NavLink to="/login" className="link-item">
             login
           </NavLink>
-
         </nav>
       </header>
+
       <div>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -162,13 +138,7 @@ function App() {
         </Routes>
       </div>
 
-
-      {/* <footer>
-        <Footer />
-      </footer> */}
-
       <Footer />
-
     </div>
   );
 }
