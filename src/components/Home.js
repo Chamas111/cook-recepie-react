@@ -5,7 +5,7 @@ import Recipe2 from "./../images/Recipe2.jpg";
 import Recipe3 from "./../images/Recipe3.jpg";
 
 import Recipe4 from "./../images/Recepies_1.png";
-
+import Teams from "./Teams";
 function Home() {
   return (
     <>
@@ -57,7 +57,7 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-
+      <Teams />
       <section id="features" className="features">
         <div className="container" data-aos="fade-up">
           <div className="row mt-3 section2-title">
