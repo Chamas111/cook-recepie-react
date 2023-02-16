@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background: linear-gradient(180deg, #f294a2, #d0cdaa);
 }
 
 img {
@@ -11,9 +12,17 @@ img {
   font-weight: bold;
   font-style: italic;
   font-size: x-large;
+
+  margin: 0.5rem
+}
+
+.carousel-item>img {
+  height: 75vh;
+
   text-decoration: none;
   list-style: none;
   color: black;
+
 }
 
 .carousel-caption {
@@ -49,12 +58,18 @@ nav {
   text-align: justify;
 }
 
+.navbarItems {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+
 .link-item {
   display: inline-block;
   list-style: none;
   text-decoration: none;
   text-transform: uppercase;
-  color: hwb(0 3% 97%);
+  color: hwb(0 100% 0%);
   font-size: 16px;
   font-family: sans-serif;
   letter-spacing: 2px;
@@ -83,7 +98,7 @@ nav {
 }
 
 .btn1-shadow {
-  color: red;
+  color: rgb(9, 44, 19);
   font-family: sans-serif;
   box-shadow: 5px 5px 15px;
   box-sizing: border-box;
@@ -100,6 +115,7 @@ nav {
   text-decoration: none;
   color: green;
 }
+
 
 .form {
   box-sizing: border-box;
@@ -120,62 +136,15 @@ nav {
   padding: 5px;
 }
 
-.form__label {
-  width: 40%;
-}
 
-.form_input {
-  width: 60%;
-}
 
-.fotter:hover {
-  background-color: blue;
-  color: white;
-}
 
-/* div h4 {
-  margin-top: 20%;
-  color: green;
-} */
-/* nav ul a {
-  text-decoration: none;
-}
-*/
 
 .link-item:hover {
   background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .card-shadow1 {
   color: black;
@@ -229,6 +198,7 @@ nav {
   border: 1px solid #f0f1f3;
   width: 300px;
   margin: 50px auto;
+  background-color: white;
 }
 
 .recipe-card__body {
@@ -326,7 +296,17 @@ nav {
   column-count: 2;
 }
 
-/*Search*/
+
+.img-fluid {
+  padding: 0.5rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 20px 1px rgba(240, 241, 243, 1);
+  -moz-box-shadow: 0px 0px 20px 1px rgb(132, 133, 135);
+  box-shadow: 0px 0px 20px 1px rgb(34, 34, 34);
+  margin-bottom: 1rem;
+}
+
+
 
 .flexbox {
   width: 100%;
@@ -638,3 +618,4 @@ nav {
   color: #848484;
   margin-left: 60px;
 }
+
