@@ -11,45 +11,12 @@ import RegistrationForm from "./components/Form";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Footer from "./components/Footer";
-
 import { NavLink, Routes, Route } from "react-router-dom";
 import logo from "./images/LogoCok.png";
-
-import { color } from "@mui/system";
-
 import { Link } from "react-router-dom";
-
 const contentful = require("contentful");
 
 function App() {
-  const [recepies, setRecepies] = useState([]);
-  const [searchInput, setSearchInput] = useState("");
-
-  const SPACE_ID = "5l97o5p6f7i4";
-  const ENVIRONMENT_ID = "master";
-  const ACCESS_TOKEN = "k5W8mi1k4jg_Y3Xpk87x73nREH0Chbeq6mNbvU175AE";
-
-  useEffect(() => {
-    const client = contentful.createClient({
-      space: SPACE_ID,
-      accessToken: ACCESS_TOKEN,
-      environment: ENVIRONMENT_ID,
-    });
-
-    client
-      .getEntries({
-        content_type: "recipeGr3",
-      })
-      .then((response) => {
-        setRecepies(response.items);
-      });
-
-    // client
-    //   .getTags()
-    //   .then((response) => console.log(response.items))
-    //   .catch(console.error);
-  }, []);
-
   return (
     <div className="App">
       <header>
@@ -72,6 +39,7 @@ function App() {
           </div>
         </nav>
       </header>
+
       <div>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -81,18 +49,51 @@ function App() {
             element={
               <>
                 <div className="container d-flex gap-5 justify-content-arround flex-wrap ">
-                  <Recepies
-                    recepies={recepies}
-                    setSearchInput={setSearchInput}
-                  />
+                  <Recepies />
+
+                  {/*  {recepies
+                    .filter((recipe) =>
+                      recipe.fields.name
+                        .toLowerCase()
+                        .includes(searchInput.toLowerCase())
+                    )
+                    .map((recipe) => (
+                      <div>
+                        <div
+                          class="card-shadow1 border "
+                          style={{ width: "18rem" }}
+                          key={recipe.sys.id}
+                        >
+                          <img
+                            src={recipe.fields.image[0].fields.file.url}
+                            class="card-img-top"
+                            alt={recipe.fields.name}
+                            style={{ width: "287px", height: "270px" }}
+                          />
+
+                          <div class="card-body">
+                            <div class="container">
+                              <h5 class="card-title1 p-3">
+                                {recipe.fields.name}
+                              </h5>
+                              <p class="text">
+                                {documentToReactComponents(
+                                  recipe.fields.description
+                                )}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <Link to={`/recepies/${recipe.sys.id}`}>
+                          <button class="btn1 btn1-shadow">More Details</button>
+                        </Link>
+                      </div>
+                    ))} */}
                 </div>
               </>
             }
           ></Route>
-          <Route
-            path="/recepies/:id"
-            element={<RecepiesDetails recepies={recepies} />}
-          ></Route>
+          <Route path="/recepies/:id" element={<RecepiesDetails />}></Route>
 
           <Route path="/about" element={<About />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
@@ -100,13 +101,8 @@ function App() {
         </Routes>
       </div>
 
-      {/* <footer>
-        <Footer />
-      </footer> */}
-
       <Footer />
     </div>
   );
 }
-
 export default App;

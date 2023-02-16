@@ -8,6 +8,8 @@ import Team from "./Team";
 
 import Recipe4 from "./../images/Recepies_1.png";
 
+import Recipe4 from "./../images/Recepies_1.png";
+
 function Home() {
   return (
     <>
@@ -59,9 +61,7 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-
       <Team />
-
       <section id="features" className="features">
         <div className="container" data-aos="fade-up">
           <div className="row mt-3 section2-title">
