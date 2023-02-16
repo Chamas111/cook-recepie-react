@@ -14,6 +14,7 @@ function Recepies() {
     setSearchInput(e.target.value);
   };
 
+
   useEffect(() => {
     const client = contentful.createClient({
       space: SPACE_ID,

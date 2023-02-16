@@ -11,20 +11,16 @@ import RegistrationForm from "./components/Form";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Footer from "./components/Footer";
-
 import { NavLink, Routes, Route } from "react-router-dom";
 import logo from "./images/LogoCok.png";
-
-import { color } from "@mui/system";
-
 import { Link } from "react-router-dom";
-
 const contentful = require("contentful");
 
 function App() {
   return (
     <div className="App">
       <header>
+
         <nav style={{ background: "#05180b", color: "white" }}>
           <img src={logo} width={50} />
           <p className="logoName"> Pinch Of Salt</p>
@@ -42,6 +38,8 @@ function App() {
               Contact
             </NavLink>
           </div>
+
+   
         </nav>
       </header>
 
@@ -106,9 +104,6 @@ function App() {
         </Routes>
       </div>
 
-      {/* <footer>
-        <Footer />
-      </footer> */}
 
       <Footer />
     </div>
