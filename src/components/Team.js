@@ -29,7 +29,7 @@ function Team() {
             <div className="col-lg-3 gap-3 col-sm-12">
               <img src={chef} alt="chef" className="img-fluid bg-light" />
               <p className="text-dark fw-bold mt-3" style={{ fontSize: 25 }}>
-                Kevin & chamas
+                Kevin
               </p>
             </div>
           </div>
