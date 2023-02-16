@@ -5,9 +5,8 @@ import Recipe2 from "./../images/Recipe2.jpg";
 import Recipe3 from "./../images/Recipe3.jpg";
 
 import Team from "./Team";
-=======
-import Recipe4 from "./../images/Recepies_1.png";
 
+import Recipe4 from "./../images/Recepies_1.png";
 
 function Home() {
   return (
@@ -115,7 +114,6 @@ function Home() {
           </div>
         </div>
       </section>
-
     </>
   );
 }

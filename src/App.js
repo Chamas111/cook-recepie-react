@@ -53,7 +53,6 @@ function App() {
   return (
     <div className="App">
       <header>
-
         <nav style={{ background: "#05180b", color: "white" }}>
           <img src={logo} width={50} />
           <p className="logoName"> Pinch Of Salt</p>
@@ -71,28 +70,6 @@ function App() {
               Contact
             </NavLink>
           </div>
-
-        <nav style={{ background: "lightblue" }}>
-          <img src={logo} width={50} />
-          <NavLink to="/" className="logoName">
-            Pinch Of Salt
-          </NavLink>
-          <NavLink to="/" className="link-item ">
-            Home
-          </NavLink>
-          <NavLink to="/recepies" className="link-item">
-            Recepies
-          </NavLink>
-          <NavLink to="/about" className="link-item">
-            About
-          </NavLink>
-          <NavLink to="/contact" className="link-item">
-            Contact
-          </NavLink>
-          <NavLink to="/login" className="link-item">
-            login
-          </NavLink>
-
         </nav>
       </header>
       <div>
@@ -108,45 +85,6 @@ function App() {
                     recepies={recepies}
                     setSearchInput={setSearchInput}
                   />
-
-                  {recepies
-                    .filter((recipe) =>
-                      recipe.fields.name
-                        .toLowerCase()
-                        .includes(searchInput.toLowerCase())
-                    )
-                    .map((recipe) => (
-                      <div>
-                        <div
-                          class="card-shadow1 border "
-                          style={{ width: "18rem" }}
-                          key={recipe.sys.id}
-                        >
-                          <img
-                            src={recipe.fields.image[0].fields.file.url}
-                            class="card-img-top"
-                            alt={recipe.fields.name}
-                            style={{ width: "287px", height: "270px" }}
-                          />
-
-                          <div class="card-body">
-                            <div class="container">
-                              <h5 class="card-title1 p-3">
-                                {recipe.fields.name}
-                              </h5>
-                              <p class="text">
-                                {documentToReactComponents(
-                                  recipe.fields.description
-                                )}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <Link to={`/recepies/${recipe.sys.id}`}>
-                          <button class="btn1 btn1-shadow">More Details</button>
-                        </Link>
-                      </div>
-                    ))}
                 </div>
               </>
             }
@@ -162,13 +100,11 @@ function App() {
         </Routes>
       </div>
 
-
       {/* <footer>
         <Footer />
       </footer> */}
 
       <Footer />
-
     </div>
   );
 }
