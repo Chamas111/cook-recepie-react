@@ -1,31 +1,51 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-
 const contentful = require("contentful");
 
-function RecepiesDetails({ recepies }) {
+function RecepiesDetails() {
+  const SPACE_ID = "5l97o5p6f7i4";
+  const ENVIRONMENT_ID = "master";
+  const ACCESS_TOKEN = "k5W8mi1k4jg_Y3Xpk87x73nREH0Chbeq6mNbvU175AE";
   const { id } = useParams();
   const [key, setKey] = useState("Ingredients");
-
-  const recepie = recepies.find((p) => p.sys.id == id);
+  const [recipe, setRecipe] = useState("");
 
   const navigate = useNavigate();
 
-  return recepie ? (
+  useEffect(() => {
+    const client = contentful.createClient({
+      space: SPACE_ID,
+      accessToken: ACCESS_TOKEN,
+      environment: ENVIRONMENT_ID,
+    });
+
+    client
+      .getEntry(id)
+
+      .then((response) => {
+        setRecipe(response);
+      });
+
+    // client
+    //   .getTags()
+    //   .then((response) => console.log(response.items))
+    //   .catch(console.error);
+  }, []);
+  return recipe ? (
     <div class="recipe-card-1">
       <img
-        src={recepie.fields.image[0].fields.file.url}
+        src={recipe.fields.image[0].fields.file.url}
         class="card-img-top"
-        alt={recepie.fields.name}
+        alt={recipe.fields.name}
         style={{ width: "600px", height: "450px" }}
       />
       <div class="recipe-card__body">
-        <h1 class="recipe-card__heading">{recepie.fields.name}</h1>
+        <h1 class="recipe-card__heading">{recipe.fields.name}</h1>
         <h2 class="recipe-card__subhead">
-          {documentToReactComponents(recepie.fields.description)}
+          {documentToReactComponents(recipe.fields.description)}
         </h2>
 
         <Tabs
@@ -36,14 +56,14 @@ function RecepiesDetails({ recepies }) {
         >
           <Tab eventKey="Ingredients" title="Ingredients">
             <ul class="recipe-card__ingredients">
-              {recepie.fields.ingridients.map((q) => (
+              {recipe.fields.ingridients.map((q) => (
                 <li>{q}</li>
               ))}
             </ul>
           </Tab>
           <Tab eventKey="Method" title="Method">
             <ul class="recipe-card__ingredients">
-              {recepie.fields.instructions.map((inst) => (
+              {recipe.fields.instructions.map((inst) => (
                 <li>{inst}</li>
               ))}
             </ul>
@@ -91,8 +111,5 @@ function RecepiesDetails({ recepies }) {
     */
     <h3>No Product Matched with id {id}</h3>
   );
-
-  {
-  }
 }
 export default RecepiesDetails;
