@@ -22,7 +22,7 @@ function App() {
       <header>
         <nav style={{ background: "#05180b", color: "white" }}>
           <img src={logo} width={50} />
-          <p className="logoName"> Pinch Of Salt</p>
+          <p className="logoName m-2"> Pinch Of Salt</p>
           <div className="navbarItems">
             <NavLink to="/" className="link-item ">
               Home

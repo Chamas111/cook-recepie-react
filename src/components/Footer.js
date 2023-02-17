@@ -11,7 +11,7 @@ export default function Footer() {
       <Container>
         <Navbar.Brand href="/">
           <img src={logo} width={50} />
-          <em>Pinch Of Salt</em>
+          <p className="logoName m-2"> Pinch Of Salt</p>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -32,7 +32,7 @@ export default function Footer() {
           </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>@2023 Prinyanka / Ahmed / Kevin / Cristian</Navbar.Text>
+          <Navbar.Text>@2023 Priyanka / Ahmed / Kevin / Cristian</Navbar.Text>
         </Navbar.Collapse>
       </Container>
     </Navbar>

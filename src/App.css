@@ -54,7 +54,7 @@ nav {
   list-style: none;
   text-decoration: none;
   text-transform: uppercase;
-  color: hwb(0 3% 97%);
+  color: hwb(0 99% 1%);
   font-size: 16px;
   font-family: sans-serif;
   letter-spacing: 2px;
@@ -116,7 +116,7 @@ nav {
   padding: 20px 10px;
 }
 
-.form-body > * {
+.form-body>* {
   padding: 5px;
 }
 
@@ -340,25 +340,25 @@ nav {
   margin: 20px;
 }
 
-.search > h3 {
+.search>h3 {
   font-weight: normal;
 }
 
-.search > h1,
-.search > h3 {
+.search>h1,
+.search>h3 {
   color: white;
   background-color: rgba(49, 54, 49, 0.5);
   margin-bottom: 15px;
   text-shadow: 0 1px #0091c2;
 }
 
-.search > div {
+.search>div {
   display: inline-block;
   position: relative;
   filter: drop-shadow(0 1px #0091c2);
 }
 
-.search > div:after {
+.search>div:after {
   content: "";
   background: white;
   width: 4px;
@@ -369,7 +369,7 @@ nav {
   transform: rotate(140deg);
 }
 
-.search > div > input {
+.search>div>input {
   color: white;
   font-size: 16px;
   background: transparent;
@@ -383,18 +383,18 @@ nav {
   cursor: pointer;
 }
 
-.search > div > input::placeholder {
+.search>div>input::placeholder {
   color: #efefef;
   opacity: 0;
   transition: opacity 150ms ease-out;
 }
 
-.search > div > input:focus::placeholder {
+.search>div>input:focus::placeholder {
   opacity: 1;
 }
 
-.search > div > input:focus,
-.search > div > input:not(:placeholder-shown) {
+.search>div>input:focus,
+.search>div>input:not(:placeholder-shown) {
   width: 250px;
 }
 
@@ -504,7 +504,7 @@ nav {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
+.contact .php-email-form .error-message br+br {
   margin-top: 25px;
 }
 
@@ -606,6 +606,7 @@ nav {
   color: green;
   padding-bottom: 50px;
 }
+
 .features {
   padding-top: 5px;
   background-color: #333;
@@ -615,10 +616,12 @@ nav {
   text-align: justify;
   color: white;
 }
+
 .features h4 {
   text-align: justify;
   color: green;
 }
+
 .features .icon-box {
   padding-left: 15px;
 }
@@ -675,11 +678,13 @@ h1 {
 h2 {
   color: #193441;
 }
+
 .masthead-heading,
 .masthead-intro {
   text-align: center;
   color: #fff;
 }
+
 .masthead {
   padding: 6em 0;
   background-image: url("https://www.nycfoodpolicy.org/wp-content/uploads/2021/03/shutterstock_645842161-2.jpg");
@@ -688,11 +693,13 @@ h2 {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .masthead-intro {
   margin-bottom: 0.1em;
   font-family: "Gentium Book Basic", Georgia, serif;
   font-size: 2em;
 }
+
 .masthead-heading {
   margin-top: -0.2em;
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
@@ -704,16 +711,19 @@ h2 {
 .masthead-heading:hover {
   color: red;
 }
+
 .questions-section h2 {
   font-family: "Gentium Book Basic", Georgia, serif;
   font-size: 1.2em;
   font-weight: bold;
 }
+
 .questions-section h1 {
   font-family: "Gentium Book Basic", Georgia, serif;
 
   color: green;
 }
+
 .introduction-section,
 .location-section,
 .questions-section {
@@ -722,9 +732,11 @@ h2 {
   margin-right: auto;
   margin-top: 2em;
 }
+
 .introduction-section h1 {
   color: green;
 }
+
 .location-section h1 {
   color: green;
 }
@@ -743,6 +755,7 @@ h2 {
   padding: 15px;
   transition: all ease 0.5s;
 }
+
 .link-footer:hover {
   color: green;
 }

@@ -48,7 +48,7 @@ function About() {
         </p>
         <p>Here now to give you the most delicious food recipes ever.</p>
         <h1>
-          <strong>Prinyanka & Christian</strong>
+          <strong>Priyanka & Christian</strong>
         </h1>
         <p>
           The idea for our food app came about when my friend and I were
